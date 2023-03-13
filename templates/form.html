@@ -1,0 +1,23 @@
+{% extends 'base.html' %}
+
+{% block header %}
+  <h1>{% block title %}Password Generator{% endblock %}</h1>
+{% endblock %}
+
+{% block content %}
+  <div class="container">
+    <form method="post">
+      <label for="length">Length</label><br>
+      <input type="number" name="length" id="length" value="8" max="64" required><br><br>
+      <input type="checkbox" checked="checked" name="lowercase" id="lowercase" value="True">
+      <label for="lowercase">Lowercase</label><br>
+      <input type="checkbox" name="uppercase" id="uppercase" value="True">
+      <label for="uppercase">Uppercase</label><br>
+      <input type="checkbox" name="numbers" id="numbers" value="True">
+      <label for="numbers">Numbers</label><br>
+      <input type="checkbox" name="special" id="special" value="True">
+      <label for="special">Special Characters</label><br><br>
+      <input type="submit" value="GENERATE">
+    </form>
+  </div>
+{% endblock %}
